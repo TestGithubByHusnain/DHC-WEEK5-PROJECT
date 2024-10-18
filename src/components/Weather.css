@@ -1,0 +1,243 @@
+ /* .weather{
+    
+    padding: 16px;
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weather.dark {
+    background-color: #333;
+    color: white;
+  }
+  
+  .weather.light {
+    background-color: #f5f5f5;
+    color: black;
+  }
+  
+  .search-bar{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.search-bar input{
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding-left: 25px;
+    color: #626262;
+    background: #ebfffc;
+    font-size: 18px;
+}
+.search-bar img{
+    width: 50px;
+    padding: 15px;
+    border-radius: 50%;
+    background: #ebfffc;
+    cursor: pointer;
+}
+  
+  .weather-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .temperature{
+    
+font-size: 60px;
+line-height: 1;
+}
+.location{
+    
+    font-size: 40px;
+}
+.weather-data{
+    
+    margin-top: 30px;
+    
+    display: flex;
+    justify-content: space-between;
+}
+  .weather-data .col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+  }
+   .weather-data .col span{
+    display: block;
+    font-size: 16px;
+}
+.weather-data .col img{
+    width: 26px;
+    margin-top: 10px;
+
+
+  
+  .col img {
+    margin-right: 10px;
+  }
+  
+  .toggle-btn {
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  } */
+   /* Root weather container */
+.weather {
+  padding: 16px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark and Light modes */
+.weather.dark {
+  background-color: #333;
+  color: white;
+}
+
+.weather.light {
+  background-color: #f5f5f5;
+  color: black;
+}
+
+/* Search bar container */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Search input field */
+.search-bar input {
+  flex: 1;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding-left: 25px;
+  color: #626262;
+  background: #ebfffc;
+  font-size: 18px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+/* Search icon button */
+.search-bar img {
+  width: 50px;
+  padding: 15px;
+  border-radius: 50%;
+  background: #ebfffc;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.search-bar img:hover {
+  background: #c2f7f3;
+}
+
+/* Weather icon */
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+/* Temperature text */
+.temperature {
+  font-size: 60px;
+  line-height: 1;
+  margin: 0;
+}
+
+/* Location text */
+.location {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+/* Weather data container */
+.weather-data {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Individual weather detail columns */
+.weather-data .col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Icons and values for weather details */
+.weather-data .col img {
+  width: 26px;
+  margin-bottom: 10px;
+}
+
+.weather-data .col p {
+  font-size: 24px;
+  margin: 0;
+}
+
+.weather-data .col span {
+  font-size: 16px;
+  color: #888;
+}
+
+/* Toggle button for theme switching */
+.toggle-btn {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 25px;
+  background-color: #1bc2c2;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-btn:hover {
+  background-color: #139999;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .weather {
+      padding: 12px;
+  }
+
+  .temperature {
+      font-size: 50px;
+  }
+
+  .location {
+      font-size: 30px;
+  }
+
+  .weather-data .col p {
+      font-size: 20px;
+  }
+
+  .weather-data .col span {
+      font-size: 14px;
+  }
+}
